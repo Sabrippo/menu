@@ -1,0 +1,79 @@
+[
+  {
+    "categoria": "pizzas",
+    "id": "muzzarella",
+    "nombre": "Muzzarella",
+    "precio": 20000
+  },
+  {
+    "categoria": "pizzas",
+    "id": "jamon",
+    "nombre": "Calabresa (salsa de tomate, calabresa, ají molido y aceitunas negras)",
+    "precio": 5000
+  },
+  {
+    "categoria": "pizzas",
+    "id": "tomate",
+    "nombre": "Margarita (salsa de tomate, muzzarella, albahaca fresca y aceitunas negras)",
+    "precio": 5200
+  },
+
+  {
+    "categoria": "empanadas",
+    "id": "carne",
+    "nombre": "Empanada de Carne",
+    "precio": 1200
+  },
+  
+  {
+    "categoria": "empanadas",
+    "id": "pollo",
+    "nombre": "Empanada de Pollo",
+    "precio": 1200
+  },
+  {
+    "categoria": "empanadas",
+    "id": "jyq",
+    "nombre": "Empanada Jamón y Queso",
+    "precio": 1300
+  },
+  
+  {
+    "categoria": "bebidas",
+    "id": "coca500",
+    "nombre": "Coca Cola (500 ml)",
+    "precio": 1500
+  },
+  {
+    "categoria": "bebidas",
+    "id": "coca15",
+    "nombre": "Coca Cola (1.5 L)",
+    "precio": 2500
+  },
+  {
+    "categoria": "bebidas",
+    "id": "agua500",
+    "nombre": "Agua Mineral (500 ml)",
+    "precio": 1000
+  },
+  {
+    "categoria": "bebidas",
+    "id": "sprite500",
+    "nombre": "Sprite (500 ml)",
+    "precio": 1500
+  },
+
+  {
+    "categoria": "postres",
+    "id": "flan",
+    "nombre": "Flan Casero (con dulce o crema)",
+    "precio": 2000
+  },
+
+  {
+    "categoria": "postres",
+    "id": "helado",
+    "nombre": "Helado (2 bochas)",
+    "precio": 2200
+  }
+]

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzería Pippo</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <base href="./">
+
+</head>
+<body>
+<header>
+  <img src="assets/imagen_circular_recortada.png" alt="Pizzería Pippo" class="logo-banner">
+</header>
+
+  <!-- 🍕 PIZZAS -->
+<div class="menu title-box">
+  <h2>Nuestras Pizzas</h2>
+</div>
+<div class="menu" id="menu"></div>
+
+<!-- 🥟 EMPANADAS -->
+<div class="menu title-box">
+  <h2>Empanadas</h2>
+</div>
+<div class="menu" id="menu-empanadas"></div>
+
+<!-- 🥤 BEBIDAS -->
+<div class="menu title-box">
+  <h2>Bebidas</h2>
+</div>
+<div class="menu" id="menu-bebidas"></div>
+
+<!-- 🍰 POSTRES -->
+<div class="menu title-box">
+  <h2>Postres</h2>
+</div>
+<div class="menu" id="menu-postres"></div>
+
+<!-- 🛒 Burbuja flotante -->
+<div id="cart-bubble"></div>
+
+<!-- BOTÓN WHATSAPP -->
+<a id="whatsapp-link" class="whatsapp-btn" href="#" target="_blank">
+  <i class="fab fa-whatsapp"></i> Enviar pedido por Whatsapp
+</a>
+
+<div id="toast" class="toast hidden">
+  ⚠️ Debes seleccionar al menos un producto antes de enviar el pedido.
+</div>
+
+  <script src="menu.js"></script>
+</body>
+</html>

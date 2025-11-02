@@ -1,0 +1,216 @@
+body {
+  font-family: 'Georgia', serif;
+  background: url('assets/pizza.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #3e2723;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  background: url('assets/cuadrille.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 5px 10px;
+}
+
+.logo-banner {
+  display: block;
+  margin: 5px auto 0 auto; 
+  width: 35% !important;
+  max-width: 140px !important;
+  height: auto;
+  border-radius: 50%;
+  border: 6px solid #104833;
+}
+
+h1 { margin: 0; font-size: 2em; }
+
+.menu {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff8e1;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d7ccc8;
+  flex-wrap: wrap;
+}
+
+.item h4 { margin: 0; }
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn {
+  background-color: #8d6e63;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.btn:hover { background-color: #6d4c41; }
+
+.count {
+  min-width: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.total {
+  text-align: right;
+  font-size: 1.2em;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.whatsapp-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* espacio entre icono y texto */
+  width: 90%;
+  max-width: 320px;
+  margin: 25px auto;
+  background-color: #075E54; /* verde oscuro elegante */
+  color: #ffffff; /* texto blanco */
+  padding: 14px 0;
+  border-radius: 40px; /* más redondeado estilo premium */
+  font-size: 1.1em;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-btn i {
+  margin-right: 8px; /* separa el ícono del texto */
+  vertical-align: middle; /* opcional, para que quede alineado */
+}
+
+
+.whatsapp-btn:hover {
+  background-color: #0a6d63; /* un tono apenas más claro que #075E54 sin flúo */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+}
+
+
+.toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffb347; /* naranja elegante */
+  color: #000;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 0.95em;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.detalle {
+  font-size: 0.75em;
+  color: #444;
+  font-style: italic;
+  display: block;   /* ← ESTO ES LO QUE LO BAJA A OTRA LÍNEA */
+  margin-top: 2px;
+}
+
+
+
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.toast.hidden {
+  opacity: 0;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .item { flex-direction: column; align-items: flex-start; }
+  .controls { margin-top: 5px; }
+}
+
+/* CAJA DE TITULO */
+.title-box {
+  background: #fff8e1;
+  border-radius: 12px;
+  padding: 5px 9px;
+  margin: 30px auto 10px auto;  /* centrado igual que el menú */
+  width: 75%;                  /* más chico que el menú */
+  max-width: 450px;            /* limite para desktop */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* H2 DE TITULO */
+.title-box h2 {
+  margin: 0;             /* <<< elimina el gran margen que lo estira */
+  padding: 0;
+  font-size: 1.2em;       /* ya proporcionado, como la imagen */
+  line-height: 1.2;       /* baja altura real */
+}
+
+
+
+
+/* =========================
+   BURBUJA FLOTANTE 🛒 (F1)
+   ========================= */
+
+#cart-bubble {
+  position: fixed;
+  bottom: 105px; /* margen M1 sobre el botón WhatsApp */
+  right: 20px;
+  z-index: 999;
+  display: none; /* se muestra solo si total > 0 */
+}
+
+.cart-bubble-inner {
+  background-color: #ffb347; /* mismo color del toast para coherencia */
+  color: #000;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-size: 0.95em;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* RESPONSIVE FIX: Controles fijos a la derecha en mobile */
+@media (max-width: 768px) {
+  .item {
+    flex-direction: row;
+    align-items: center;
+  }
+  .controls {
+    margin-top: 0;
+    margin-left: auto;
+  }
+}
+
